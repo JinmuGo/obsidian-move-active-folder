@@ -1,6 +1,8 @@
 # Move Active Folder
 
-Move the folder containing the currently active file.
+Move the folder containing the currently active file
+
+![demo](https://github.com/user-attachments/assets/5b8ec07b-a1e0-47af-a559-2e26ee030212)
 
 ## How to use
 
