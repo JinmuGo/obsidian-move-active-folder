@@ -23,15 +23,15 @@ export class DestinationModal extends FuzzySuggestModal<TFolder> {
 	renderSuggestion(match: FuzzyMatch<TFolder>, el: HTMLElement): void {
 		el.classList.add("mod-complex");
 
-		const content = el.createEl("div", { cls: "suggestion-content" });
+		const content = el.createDiv({ cls: "suggestion-content" });
 
 		const name = match.item.isRoot() ? "/" : match.item.name;
 
-		content.createEl("div", { text: name, cls: "suggestion-title" });
+		content.createDiv({ text: name, cls: "suggestion-title" });
 
 		const path = match.item.isRoot() ? "Vault Root" : match.item.path;
 
-		content.createEl("div", { text: path, cls: "suggestion-note" });
+		content.createDiv({ text: path, cls: "suggestion-note" });
 	}
 
 	onChooseItem(item: TFolder, _evt: MouseEvent | KeyboardEvent): void {
