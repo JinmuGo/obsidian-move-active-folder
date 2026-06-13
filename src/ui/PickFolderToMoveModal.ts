@@ -23,9 +23,9 @@ export class PickFolderToMoveModal extends FuzzySuggestModal<TFolder> {
 
 	renderSuggestion(match: FuzzyMatch<TFolder>, el: HTMLElement): void {
 		el.classList.add("mod-complex");
-		const content = el.createEl("div", { cls: "suggestion-content" });
-		content.createEl("div", { text: match.item.name, cls: "suggestion-title" });
-		content.createEl("div", { text: match.item.path, cls: "suggestion-note" });
+		const content = el.createDiv({ cls: "suggestion-content" });
+		content.createDiv({ text: match.item.name, cls: "suggestion-title" });
+		content.createDiv({ text: match.item.path, cls: "suggestion-note" });
 	}
 
 	onChooseItem(item: TFolder, _evt: MouseEvent | KeyboardEvent): void {
