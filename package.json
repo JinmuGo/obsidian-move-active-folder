@@ -1,6 +1,6 @@
 {
   "name": "obsidian-move-active-folder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Move the folder containing the currently active file.",
   "main": "main.js",
   "scripts": {

@@ -1,11 +1,11 @@
 {
-  "id": "move-active-folder",
-  "name": "Move Active Folder",
-  "version": "1.0.0",
-  "minAppVersion": "0.15.0",
-  "description": "Move the folder containing the currently active file.",
-  "author": "Jinmu Go",
-  "authorUrl": "https://github.com/JinmuGo",
-  "fundingUrl": "https://github.com/sponsors/JinmuGo",
-  "isDesktopOnly": false
+	"id": "move-active-folder",
+	"name": "Move Active Folder",
+	"version": "1.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "Move the folder containing the currently active file.",
+	"author": "Jinmu Go",
+	"authorUrl": "https://github.com/JinmuGo",
+	"fundingUrl": "https://github.com/sponsors/JinmuGo",
+	"isDesktopOnly": false
 }
