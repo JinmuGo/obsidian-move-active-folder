@@ -1,0 +1,19 @@
+# Lefthook configuration
+# Docs: https://lefthook.dev/configuration/
+# Hooks are installed automatically via the "prepare" script (pnpm install).
+
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "src/**/*.{ts,tsx,js,jsx,json,jsonc,css}"
+      run: pnpm biome check --write --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
+
+pre-push:
+  parallel: true
+  commands:
+    typecheck:
+      run: pnpm typecheck
+    test:
+      run: pnpm test
