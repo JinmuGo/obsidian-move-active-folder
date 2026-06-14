@@ -35,7 +35,7 @@ export class App {
 	fileManager: any;
 	constructor() {
 		this.vault = {
-			getAllLoadedFiles: jest.fn(),
+			getAllFolders: jest.fn(),
 			getAbstractFileByPath: jest.fn(),
 		};
 		this.fileManager = {

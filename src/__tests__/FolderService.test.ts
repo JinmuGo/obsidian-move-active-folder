@@ -38,7 +38,7 @@ describe("FolderService", () => {
 		activeFile = new TFile("Parent/Target/ActiveFile.md");
 		activeFile.parent = targetFolder;
 
-		(app.vault.getAllLoadedFiles as jest.Mock).mockReturnValue([
+		(app.vault.getAllFolders as jest.Mock).mockReturnValue([
 			rootFolder,
 			parentFolder,
 			targetFolder,

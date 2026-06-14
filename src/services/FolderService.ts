@@ -1,4 +1,4 @@
-import { type App, type TFile, TFolder } from "obsidian";
+import type { App, TFile, TFolder } from "obsidian";
 
 export class FolderService {
 	app: App;
@@ -31,18 +31,9 @@ export class FolderService {
 	 * 3. Any descendants of the folder (circular move).
 	 */
 	getValidDestinations(folderToMove: TFolder): TFolder[] {
-		const allFiles = this.app.vault.getAllLoadedFiles();
-		const folders: TFolder[] = [];
-
-		for (const file of allFiles) {
-			if (file instanceof TFolder) {
-				if (this.isValidDestination(folderToMove, file)) {
-					folders.push(file);
-				}
-			}
-		}
-
-		return folders;
+		// Enumerate only folders (including the root) rather than every file in the
+		// vault, so the plugin touches just the folder paths it needs as destinations.
+		return this.app.vault.getAllFolders(true).filter((folder) => this.isValidDestination(folderToMove, folder));
 	}
 
 	private isValidDestination(folderToMove: TFolder, target: TFolder): boolean {
